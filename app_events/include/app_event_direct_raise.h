@@ -19,6 +19,7 @@ static int FUNC_NAME(uint32_t id, uint16_t type, uint16_t len, const FUNC_TYPE *
     // outbound check:
     // investigate whether the given event type belongs to the component's outbound events
 
+/*
     int i, j, pass = 0;
     for (i=0; i<av_ctx->num_apps; i++) {
         app_t *app = av_ctx->app_list[i];
@@ -31,6 +32,7 @@ static int FUNC_NAME(uint32_t id, uint16_t type, uint16_t len, const FUNC_TYPE *
         if (pass) break;
     }
     if (!pass) return -1;
+*/
 
     app_event_out_t av_out;
     app_event_t *av = (app_event_t *)&av_out;
@@ -46,6 +48,7 @@ static int FUNC_NAME(uint32_t id, uint16_t type, uint16_t len, const FUNC_TYPE *
 
     av_ctx->num_app_events[type]++;
 
+    int i;
     for (i=0; i<av_num; i++) {
         app_t *app = av_list[i];
 

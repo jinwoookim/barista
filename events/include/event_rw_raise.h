@@ -16,6 +16,8 @@ static int FUNC_NAME(uint32_t id, uint16_t type, uint16_t len, FUNC_TYPE *data)
 
     if (ev_list == NULL) return -1;
 
+    int i;
+/*
     // outbound check:
     // investigate whether the given event type belongs to the component's outbound events
     int i, j, pass = 0;
@@ -30,6 +32,7 @@ static int FUNC_NAME(uint32_t id, uint16_t type, uint16_t len, FUNC_TYPE *data)
         if (pass) break;
     }
     if (!pass) return -1;
+*/
 
     // only for request-reponse events
     if (EV_ALL_DOWNSTREAM < type && type < EV_WRT_INTSTREAM) {
